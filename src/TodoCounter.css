@@ -1,0 +1,14 @@
+h1, h2 {
+  font-weight: bold;
+  text-align: center;
+}
+
+.TodoName {
+  font-size: 2rem;
+  color: var(--yellow);
+}
+
+.TodoCounter {
+  font-size: 0.95em;
+  color: var(--opacity-light);
+}

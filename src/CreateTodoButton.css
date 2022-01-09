@@ -1,0 +1,27 @@
+.createTodoButton {
+  background-color: var(--yellow);
+  border: none;
+  color: var(--dark);
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bolder;
+  margin: 4px 2px;
+  padding: 0;
+  cursor: pointer;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  
+  transition: transform 0.2s ease-out;
+}
+
+.createTodoButton:hover {
+  transform: scale(1.06);
+}
