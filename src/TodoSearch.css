@@ -15,4 +15,5 @@
 
 .todoSearch:focus {
   border-color: var(--yellow);
+  caret-color: var(--yellow);
 }

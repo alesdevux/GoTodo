@@ -1,14 +1,16 @@
 h1, h2 {
-  font-weight: bold;
   text-align: center;
 }
 
 .TodoName {
   font-size: 2rem;
   color: var(--yellow);
+  margin-bottom: 0.5rem;
 }
 
 .TodoCounter {
   font-size: 0.95em;
+  font-weight: 600;
   color: var(--opacity-light);
+  margin-bottom: 3rem;
 }

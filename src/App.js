@@ -4,7 +4,7 @@ import { TodoSearch } from "./TodoSearch";
 import { TodoList } from "./TodoList";
 import { TodoItem } from "./TodoItem";
 import { CreateTodoButton } from "./CreateTodoButton";
-// import './App.css';
+import './App.css';
 
 const todos = [
   {text: 'Learn React', completed: false},
@@ -14,7 +14,7 @@ const todos = [
 
 function App(props) {
   return (
-    <React.Fragment>
+    <div className="container">
       <TodoCounter />
       <TodoSearch />
       <TodoList>
@@ -27,7 +27,7 @@ function App(props) {
         ))}
       </TodoList>
       <CreateTodoButton />
-    </React.Fragment>
+    </div>
   );
 }
 
