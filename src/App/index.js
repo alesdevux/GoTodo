@@ -2,14 +2,36 @@ import React from "react";
 import { AppUI } from "./AppUI";
 import './App.css';
 
-const defaultTodos = [
-  {text: 'Learn React', completed: false},
-  {text: 'Learn Redux', completed: true},
-  {text: 'Learn Next.js', completed: false},
-]
+// const defaultTodos = [
+//   {text: 'Learn React', completed: false},
+//   {text: 'Learn Redux', completed: true},
+//   {text: 'Learn Next.js', completed: false},
+// ]
+
+function useLocalStorage(itemName, initialValue) {
+  const localStorageItem = localStorage.getItem(itemName);
+  let parsedItems = initialValue;
+
+  if (localStorageItem) {
+    parsedItems = JSON.parse(localStorageItem);
+  } else {
+    localStorage.setItem(itemName, JSON.stringify(initialValue));
+    parsedItems = initialValue;
+  }
+
+  const [item, setItem] = React.useState(parsedItems);
+
+  const saveItem = (newItem) => {
+    const stringifiedItem = JSON.stringify(newItem);
+    localStorage.setItem(itemName, stringifiedItem);
+    setItem(newItem);
+  };
+
+  return [item, saveItem];
+}
 
 function App(props) {
-  const [todos, setTodos] = React.useState(defaultTodos);
+  const [todos, saveTodos] = useLocalStorage('TODOS_V1', []);
   const [searchValue, setSearchValue] = React.useState('');
 
   const completedTodos = todos.filter(todo => !!todo.completed).length;
@@ -32,13 +54,13 @@ function App(props) {
     const todoIndex = todos.findIndex(todo => todo.text === text);
     const newTodos = [...todos];
     newTodos[todoIndex].completed = !newTodos[todoIndex].completed;
-    setTodos(newTodos);
+    saveTodos(newTodos);
   };
   const deleteTodo = (text) => {
     const todoIndex = todos.findIndex(todo => todo.text === text);
     const newTodos = [...todos];
     newTodos.splice(todoIndex, 1);
-    setTodos(newTodos);
+    saveTodos(newTodos);
   };
 
   return (
