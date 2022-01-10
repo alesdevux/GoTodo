@@ -18,6 +18,7 @@ function App(props) {
 
   const completedTodos = todos.filter(todo => !!todo.completed).length;
   const totalTodos = todos.length;
+  const percentCompletedTodos = totalTodos ? Math.round(completedTodos / totalTodos * 100) : 0;
 
   let searchedTodos = [];
 
@@ -31,11 +32,19 @@ function App(props) {
     searchedTodos = todos;
   }
 
+  const completeTodos = (text) => {
+    const todoIndex = todos.findIndex(todo => todo.text === text);
+    const newTodos = [...todos];
+    newTodos[todoIndex].completed = !newTodos[todoIndex].completed;
+    setTodos(newTodos);
+  };
+
   return (
     <div className="container">
       <TodoCounter
         completed={completedTodos}
         total={totalTodos}
+        percent={percentCompletedTodos}
       />
       <TodoSearch
         searchValue={searchValue}
@@ -47,6 +56,7 @@ function App(props) {
             key={todo.text} 
             text={todo.text}
             completed={todo.completed}
+            onComplete={() => completeTodos(todo.text)}
           />
         ))}
       </TodoList>
