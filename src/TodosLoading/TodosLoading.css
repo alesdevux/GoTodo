@@ -1,0 +1,26 @@
+.LoadingTodo {
+  height: 3rem;
+  background-color: var(--second-dark);
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.LoadingTodo {
+  background: linear-gradient(90deg, rgba(42,49,60,1), var(--third-dark));
+  background-size: 400% 400%;
+  animation: loadingAnimation 3s ease-in-out infinite;
+}
+
+@keyframes loadingAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
