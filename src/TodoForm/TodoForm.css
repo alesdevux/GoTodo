@@ -1,0 +1,75 @@
+form {
+  width: 90%;
+  max-width: 300px;
+  background-color: var(--second-dark);
+  padding: 28px 32px;
+  display: flex;
+  gap: 16px;
+  align-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+label {
+  font-weight: bold;
+}
+
+textarea {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  width: calc(100% - 24px);
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  border: 2px solid var(--opacity-none);
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--light);
+  background-color: var(--third-dark);
+  resize: none;
+}
+
+textarea:focus {
+  border-color: var(--yellow);
+  caret-color: var(--yellow);
+}
+
+.TodoForm-buttonContainer {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+}
+
+.TodoForm-button {
+  cursor: pointer;
+  display: inline-block;
+  text-transform: uppercase;
+  color: var(--opacity-light);
+  font-weight: bold;
+  width: 100%;
+  height: 48px;
+  border-radius: 5px;
+  border: 2px solid var(--opacity-none);
+}
+
+.TodoForm-button-cancel {
+  background: transparent;
+}
+
+.TodoForm-button-cancel:hover {
+  border: 2px solid var(--opacity-light);
+  background: var(--opacity-light);
+  color: var(--light);
+}
+
+.TodoForm-button-add {
+  color: var(--yellow);
+  background-color: var(--second-dark);
+  border: 2px solid var(--yellow);
+}
+
+.TodoForm-button-add:hover {
+  color: var(--second-dark);
+  background-color: var(--yellow);
+}
