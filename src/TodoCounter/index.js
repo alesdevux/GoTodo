@@ -1,11 +1,17 @@
 import React from "react";
+import { TodoContext } from "../TodoContext";
 import './TodoCounter.css';
 
-function TodoCounter({completed, total, percent}) {
+function TodoCounter() {
+  const {
+    completedTodos,
+    totalTodos,
+    percentCompletedTodos,
+  } = React.useContext(TodoContext);
   return (
     <React.Fragment>
       <h1 className="TodoName">🦄 Go TODO 🎉</h1>
-      <h2 className="TodoCounter">Tienes completado {completed} de {total} TODOs <em>- {percent}%</em></h2>
+      <h2 className="TodoCounter">Tienes completado {completedTodos} de {totalTodos} TODOs <em>- {percentCompletedTodos}%</em></h2>
     </React.Fragment>
   );
 }
