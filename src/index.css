@@ -6,6 +6,7 @@
   --red: #EB5757;
   --second-dark: #2A313C;
   --third-dark: #3B4454;
+  --opacity-dark: rgba(32, 37, 45, 0.85);
   --opacity-light: rgba(242, 242, 242, 0.5);
   --opacity-red: rgba(235, 87, 87, 0.85);
   --opacity-none: rgba(0, 0, 0, 0);
@@ -34,7 +35,7 @@ body {
 #root {
   margin: 0 24px;
   position: relative;
-  min-height: 100vh;
+  min-height: calc(100vh - 22px);
 }
 
 code {
