@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/GoTodo/static/css/main.1f965ece.css",
+    "main.js": "/GoTodo/static/js/main.b39b0b7a.js",
+    "index.html": "/GoTodo/index.html",
+    "static/media/tasks.svg": "/GoTodo/static/media/tasks.f2b48d6e456590d44f4bfc4a3ad716e5.svg",
+    "static/media/delete.svg": "/GoTodo/static/media/delete.a1d55763135230ccc10b3b92d300f65e.svg",
+    "static/media/close.svg": "/GoTodo/static/media/close.1f6a36f4012aee47c939bc73552aab18.svg",
+    "static/media/check.svg": "/GoTodo/static/media/check.86cf88f4749f8381a7b1590ef1f129a2.svg",
+    "static/media/plus.svg": "/GoTodo/static/media/plus.e07cc10b6e784711a3276f2a08aefeb4.svg",
+    "main.1f965ece.css.map": "/GoTodo/static/css/main.1f965ece.css.map",
+    "main.b39b0b7a.js.map": "/GoTodo/static/js/main.b39b0b7a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1f965ece.css",
+    "static/js/main.b39b0b7a.js"
+  ]
+}
