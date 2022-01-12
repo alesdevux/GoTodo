@@ -4,6 +4,7 @@ import {ReactComponent as CheckSVG} from '../Icons/check.svg';
 import {ReactComponent as DeleteSVG} from '../Icons/delete.svg';
 import {ReactComponent as PlusSVG} from '../Icons/plus.svg';
 import {ReactComponent as CloseSVG} from '../Icons/close.svg';
+import {ReactComponent as TasksSVG} from '../Icons/tasks.svg';
 
 function TodoIcon({type, color, onClick}) {
   const iconTypes = {
@@ -28,6 +29,12 @@ function TodoIcon({type, color, onClick}) {
     "close": color => (
       <CloseSVG
         className="Icon-svg Icon-svg--close"
+        fill={color}
+      />
+    ),
+    "tasks": color => (
+      <TasksSVG
+        className="Icon-svg Icon-svg--tasks"
         fill={color}
       />
     ),

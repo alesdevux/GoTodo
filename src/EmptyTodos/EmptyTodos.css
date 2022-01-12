@@ -1,0 +1,15 @@
+.EmptyTodos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.EmptyTodos .Icon-container {
+  width: 250px;
+  height: 250px;
+}
+
+.EmptyTodos .Icon-svg {
+  width: 100%;
+  height: 100%;
+}
