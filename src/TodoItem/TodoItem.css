@@ -16,19 +16,6 @@
   transform: scale(1.01);
 }
 
-.Icon {
-  width: 3rem;
-  height: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bolder;
-}
-
-.Icon-check--active {
-  color: var(--yellow);
-}
-
 .TodoItem-p {
   flex: 1;
   display: flex;
@@ -40,13 +27,4 @@
   text-decoration: line-through;
   text-decoration-color: var(--opacity-light);
   color: var(--opacity-light);
-}
-
-.Icon-delete {
-  color: var(--opacity-light);
-}
-
-.Icon-delete:hover {
-  background-color: var(--opacity-red);
-  color: var(--light);
 }
